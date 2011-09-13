@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eux
+
+/etc/init.d/nuxeo-dm stop
+

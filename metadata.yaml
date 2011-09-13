@@ -1,0 +1,14 @@
+ensemble: formula
+name: nuxeo
+revision: 1
+summary: "Nuxeo ECM platform"
+description: |
+    Installs the Nuxeo ECM platform, relates to the postgresql formula provided
+    in examples directory.
+requires:
+  db:
+    interface: pgsql
+provides:
+  website:
+    interface: http
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eux
+
+ensemble-log "adding repository"
+apt-add-repository ppa:nuxeo-isv/nuxeo-dm
+apt-get update
+
+ensemble-log "installing nuxeo-dm"
+DEBIAN_FRONTEND=noninteractive apt-get -y install nuxeo-dm
+
+ensemble-log "opening port 8080"
+if [ -x /usr/bin/open-port ];then
+   open-port 8080/TCP
+fi
